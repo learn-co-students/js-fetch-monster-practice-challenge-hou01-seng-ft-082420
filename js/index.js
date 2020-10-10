@@ -12,7 +12,7 @@ function pageFetch(pagenumber){
 }
 
 function realPageTurner(){
-    let pgNum = 20
+    let pgNum = 1
     pageFetch(pgNum)
     const rightBtn = document.querySelector('#forward')
     const leftBtn = document.querySelector('#back')
