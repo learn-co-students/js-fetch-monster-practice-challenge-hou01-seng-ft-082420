@@ -19,6 +19,7 @@ function realPageTurner(){
     rightBtn.addEventListener('click', () => {
         pgNum ++
         console.log("FORWARD!", pgNum)
+        
         pageFetch(pgNum)
     })
     leftBtn.addEventListener('click', () => {
@@ -37,10 +38,10 @@ function displayMonster(monster){
     h2.innerText = monster.name 
 
     const h4 = document.createElement('h4')
-    h4.innerText = monster.age
+    h4.innerText = `Age: ${monster.age}`
 
     const p = document.createElement('p')
-    p.innerText = monster.description
+    p.innerText = `Bio: ${monster.description}`
 
     div.append(h2, h4, p)
     container.append(div)
