@@ -99,6 +99,7 @@ function createMonsterForm() {
 function changePage(){
     const backBtn = document.getElementById('back')
     const fwrdBtn = document.getElementById('forward')
+    const monContainer = document.getElementById('monster-container')
 
     backBtn.addEventListener("click", function(e){
         page--
@@ -106,12 +107,14 @@ function changePage(){
             alert("There ain't not monsters here!")
             page = 1
         }
+        monContainer.innerHTML = ""
         fetchMonsters(page)
         console.log("We moving backward!")
     })
 
     fwrdBtn.addEventListener("click", function(e){
         page++
+        monContainer.innerHTML = ""
         fetchMonsters(page)
         console.log("We moving forward!")
     })
